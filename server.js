@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 
 app.post('/', function(req, res){
     try {
-    nonExistentFunction();
+    nonExistentFunction()
   } catch (error) {
     console.error(error);
   }
@@ -32,7 +32,7 @@ app.post('/', function(req, res){
 
 app.use('/', function (req, res){
     try{
-        nonExistentFunction():
+        nonExistentFunction()
     }catch (error) {
         console.error(error);
     }
