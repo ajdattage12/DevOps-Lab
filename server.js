@@ -15,6 +15,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, "/public/index.html"))
+})
+
+app.use("/", express.static(path.join(__dirname, "/public")));
+
+app.use('/css', express.static(path.join(__dirname, "/styles.css")))
 
 app.use(rollbar.errorHandler());
 
