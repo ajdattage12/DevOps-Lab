@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
 //     res.status(400).send("Opps! That is not allowed.")
 // })
 
-app.use('/', function (req, res){
+app.use('/button', function (req, res){
     try{
         nonExistentFunction()
     }catch (error) {
