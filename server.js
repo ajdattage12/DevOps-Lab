@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"))
 })
 
-app.post('/input', function(req, res){
+app.post('/button', function(req, res){
     try {
     nonExistentFunction()
   } catch (error) {
