@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', function(req, res) {
+    rollbar.info("HTML file served successfully");
     res.sendFile(path.join(__dirname, "/public/index.html"))
 })
 
