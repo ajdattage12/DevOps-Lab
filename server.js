@@ -30,15 +30,15 @@ app.get('/', function(req, res) {
 //     res.status(400).send("Opps! That is not allowed.")
 // })
 
-// app.use('/', function (req, res){
-//     try{
-//         nonExistentFunction()
-//     }catch (error) {
-//         console.error(error);
-//     }
-//     rollbar.info("This is the fake function error");
-//     res.status(400).send("Fake Function Alert")
-// })
+app.use('/', function (req, res){
+    try{
+        nonExistentFunction()
+    }catch (error) {
+        console.error(error);
+    }
+    rollbar.info("This is the fake function error");
+    res.status(400).send("Fake Function Alert")
+})
 
 app.use("/", express.static(path.join(__dirname, "/public")));
 
